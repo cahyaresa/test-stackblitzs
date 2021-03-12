@@ -1,0 +1,29 @@
+<p>mkt-product-detail works!</p>
+
+<div class="product-details-container">
+    <!-- <app-dvnt-product-mobile-images
+      *ngIf="isMobileView$ | async; else desktopImagesGallery"
+    ></app-dvnt-product-mobile-images> -->
+
+    <!-- <ng-template #desktopImagesGallery>
+        <app-mkt-product-image></app-mkt-product-image>
+    </ng-template> -->
+
+    <app-mkt-product-image></app-mkt-product-image>
+
+    <div class="product-details-content">
+        <app-mkt-product-intro></app-mkt-product-intro>
+        <app-mkt-product-add-to-cart *ngIf="product$ | async as product" [product]="product"></app-mkt-product-add-to-cart>
+
+        <!-- As it is mock element to show variants with size as default -->
+        <!-- <app-dvnt-product-variants
+        *ngIf="!(outOfStock$ | async)"
+      ></app-dvnt-product-variants> -->
+
+        <cx-add-to-wishlist></cx-add-to-wishlist>
+
+        <app-mkt-stock-notification></app-mkt-stock-notification>
+
+        <!-- <app-dvnt-product-tabs-wrapper></app-dvnt-product-tabs-wrapper> -->
+    </div>
+</div>

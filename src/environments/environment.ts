@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  occBaseUrl: 'https://localhost:9002',
+  occBasePrefix: '/astramarketplacecommercewebservices/v2/'
+
+  // occBasePrefix: '/occ/v2/'
 };
 
 /*
