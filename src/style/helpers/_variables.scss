@@ -1,0 +1,77 @@
+/*Typography*/
+
+$rubik-normal:	'Rubik-normal';
+$rubik-light:	'Rubik-light';
+$rubik-medium: 	'Rubik-medium';
+$rubik-bold: 	'Rubik-bold';
+$rubik-regular: 'Rubik-regular';
+$icomoon: 'icomoon';
+
+/*Font*/
+$font-size-xx-small:	9px;
+$font-size-x-small:		10px;
+$font-size-small:		12px;
+$font-size-x-medium:	13px;
+$font-size-medium:		14px;
+$font-size-x-normal: 	24px;
+$font-size-normal:		26px;
+$font-size-regular:		16px;
+$font-size-x-regular:		18px;
+$font-size-xx-regular:		21px;
+$font-size-large:		20px;
+$font-size-x-large:		30px;
+$font-size-xx-large:	42px;
+$font-size-xxx-large:	64px;
+$font-size-xxxx-large:	96px;
+
+
+/*Colors*/
+$azure-radiance-color: 		#008FFF;
+$endeavour-color: 			#0052A6;
+$gulf-blue-color: 			#03065D;
+$dodger-blue:				#40ACFF;
+$amarnath-color: 			#ff0064;
+$black-color:				#000000;
+$white-color:				#FFFFFF;
+$cod-gray-color:			#131313;
+$alto-color:				#D8D8D8;
+$gallery-color: 			#EEEEEE;
+$concrete-color:			#F2F2F2;
+$alabaster-color:			#F8F8F8;
+$whitesmoke-color:			#F6F6F6;
+$border-color:              #e2e2e2;
+$border-light-color:        #e5e5e5;
+$purple-color:              #415dda;
+$grey-color:                #292b37;
+$red-color:                 #94111c;
+$grey-light-color:          #808080;
+$ghost-white-color:         #f8f8f9;
+
+$alert-red: 				#E2400C;
+$alert-green: 				#1EBC44;
+$alert-blue: 				#008FFF;
+$text-gray: #929497;
+$text-black: #231f20;
+
+
+$text-color: $cod-gray-color;
+$border-color-2: #ebebeb;
+$border-color-secondary: $cod-gray-color;
+
+$border-color-textbox: $alto-color;
+$hover-color: #008FFF;
+$text-color-black: #000000;
+$text-color-lt-grey: #898989;
+$dk-grey: #8a8a8a;
+
+$blue-background: $hover-color;
+$lt-grey-bg: $alabaster-color;
+/*Media */
+$breakpoints: (
+  'extrasmall' : 767px,
+  'small':   769px,
+  'medium':  1023px,
+  'large':  1200px
+) !default;
+
+

@@ -1,0 +1,350 @@
+.container-addres-box{
+  @include screen (mobile){
+    width: 100%;
+  }
+  @include screen (tablet){
+    width: 50%;
+  }
+  @include screen (desktop){
+    width: 50%;
+  }
+  .box-dropdown{
+    width: 700px;
+    @include screen (mobile){
+      width: 100%;
+    }
+    @include screen (tablet){
+      width: 98%;
+    }
+    @include screen (desktop){
+      width: 100%;
+    }
+    .step-body{
+      width: 100%;
+      height: 350px;
+      border-radius: 1px;
+      border: solid 1px #bbbdbf;
+      @include screen (mobile){
+        width: 100% !important;
+        margin-left: 0px !important;
+      }
+      .information-customer{
+        //Gelar
+      .form-degree{
+        margin-left: -10px;
+        .form-jabatan{
+          label.control-label-gelar {
+            width: 52px !important;
+            height: 19px !important;
+            font-family: Rubik-medium !important;
+            font-size: 16px !important;
+            font-weight: 500 !important;
+            font-stretch: normal !important;
+            font-style: normal !important;
+            line-height: 1.2 !important;
+            letter-spacing: normal !important;
+            text-align: left !important;
+            color: #231f20 !important;
+            margin-left: 3%;
+            margin-top: 25px;
+            @media screen and (max-width: 991px){
+              margin-left: 6%;
+              font-size: 12px !important;
+            }
+          }
+        }
+
+      }
+
+        //  ******** name ********* //
+        .form-name{
+          display: flex;
+          margin-left: -10px;
+          @include screen(mobile){
+            display: block;
+          }
+          // *** firstname *** //
+          .form-firstname{
+            @include screen(mobile){
+              //margin-left: -10px;
+            }
+            .form-control-firstname{
+              height: 40px !important;
+              border-radius: 4px !important;
+              font-size: 16px;
+              border: solid 0.5px #bbbdbf !important;
+              background-color: white !important;
+              display: flex !important;
+              //margin-left: 25px !important;
+              @include screen(mobile){
+                width: 100% !important;
+                font-size: 14px;
+              }
+            }
+          }
+
+          // *** lastname *** //
+          .form-lastname{
+            .form-control-lastname{
+                height: 40px !important;
+                border-radius: 4px !important;
+                font-size: 16px;
+                border: solid 0.5px #bbbdbf !important;
+                background-color: white !important;
+                @include screen(mobile){
+                  width: 100% !important;
+                  font-size: 14px;
+                }
+            }
+
+          }
+        }
+
+        //email
+        .form-emailphone{
+          margin-left: -12px;
+          @include screen(tablet){
+            display: flex;
+          }
+          .form-email{
+            .nameEmail{
+              margin-left: 5px;
+              width: 126px;
+              height: 19px;
+              font-family: Rubik-medium;
+              font-size: 16px;
+              font-weight: 500;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1.2;
+              letter-spacing: normal;
+              text-align: left;
+              color: #231f20;
+              @media screen and (max-width: 991px){
+                margin-left: 0px;
+                font-size: 12px;
+              }
+            }
+            .form-control-lastname{
+              height: 40px !important;
+              border-radius: 4px !important;
+              border: solid 0.5px #bbbdbf !important;
+              background-color: white !important;
+              font-size: 16px;
+              margin-left: 4px !important;
+              @include screen(mobile){
+                width: 100% !important;
+                margin-left: 0px !important;
+                font-size: 14px;
+              }
+              @include screen(tablet){
+
+              }
+            }
+            #validation-personal-info{
+              #validation-required-email{
+                margin-right: 40px;
+              }
+              margin-right: 13px;
+            }
+          }
+          .form-phone{
+            .kotak-phone{
+              display: flex;
+              @include screen(mobile){
+                width: 100%;
+              }
+              .plcholder{
+                width: 45px;
+                height: 40px;
+                border:solid 0.5px #bbbdbf;
+                border-radius: 4px 0px 0px 4px;
+                border-right: -0px;
+                background: #f1f1f2;
+                padding: 8px;
+                font-size: 16px;
+                color: black;
+                border-right-color: white;
+                @media screen and (max-width: 991px){
+                  font-size: 12px;
+                }
+              }
+              .box-number-phone{
+                @include screen(mobile){
+                  width: 100%;
+                }
+                .form-control-phone{
+                  height: 40px !important;
+                  border-radius: 0px 4px 4px 0px !important;
+                  border-left: -0px !important;
+                  border: solid 0.5px #bbbdbf !important;
+                  background-color: #ffffff !important;
+                  margin-left: 0px !important;
+                  @include screen(mobile){
+                    width: 100% !important;
+                    font-size: 14px;
+                  }
+                }
+                #validation-personal-info{
+                  margin-left: -45px;
+                }
+              }
+            }
+
+          }
+        }
+
+        }
+        //input
+        //phone
+        .checkout-next{
+          margin: 0 0 0 30% !important;
+          @media screen and (min-width: 1400px){
+            margin: 0 0 0 35% !important;
+          }
+        }
+        .abc{
+          margin-left: 30%;
+          float: left;
+          width: 40%;
+          height: 45px;
+          border: solid 0.5px #ffffff;
+          border-radius: 22.5px;
+          background-color: #2769f6;
+        }
+
+      }
+
+    }
+
+  }
+  .checkbox{
+    display: none;
+  }
+
+  .cartPageContainer .container-addres-box{
+
+    @media screen and (min-width: 1300px){
+      padding-left: 15px;
+      .checkout-headline{
+        padding-left: 0;
+      }
+    }
+  }
+.checkout-steps{
+  padding-left: 0;
+  padding-right: 15px;
+}
+
+.checkout-shipping{
+  padding: 30px 15px 15px !important;
+}
+
+.other-saved-address{
+  .modal{
+    overflow: hidden;
+    .modal-dialog {
+      height: 0;
+      @media screen and (min-width: 1024px) {
+        max-width: 750px;
+      }
+
+      .modal-content {
+        max-height: 600px;
+
+        .modal-header{
+          border: none;
+          .modal-title{
+            font-size: 20px;
+            text-align: center;
+            width: 100%;
+            font-family: Rubik-medium;
+          }
+          button .icon-search-close{
+            font-size: 15px;
+          }
+        }
+
+        .modal-body {
+          overflow: auto;
+
+          .list-address-book {
+            width: 85%;
+            border-radius: 10px;
+            border: solid 1px #d8d8d8;
+            margin: 20px 7%;
+            @media screen and (min-width: 1024px){
+              height: 140px;
+            }
+            .list-address{
+              margin: 20px;
+              .detail-address{
+                width: 80%;
+                .full-address{
+                  color: #929497;
+                }
+                .change-address{
+                  color: #2769f6;
+                  margin-top: 5px;
+                }
+              }
+              .choose-address-book{
+                height: 45px;
+                margin-top: 5%;
+              }
+              .close-addressbook-list{
+                position: absolute;
+                margin-top: -9%;
+              }
+              .icon-search-close:before{
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #modal_delete_address{
+    height: 285px;
+    margin: 15% auto;
+
+    @media screen and (min-width: 1024px){
+      width: 455px;
+    }
+
+    .modal-content{
+      .modal-header{
+        padding-bottom: 0;
+        .modal-title{
+          margin-top: 8%;
+        }
+      }
+
+      .body-remove-address{
+        font-size: 14px;
+        text-align: center;
+        color: #666666;
+        .address-to-remove{
+          font-weight: bold;
+        }
+      }
+      .modal-footer{
+        border: none;
+        .btn{
+          a{
+            color: #ffffff;
+          }
+        }
+        .btn-light{
+          background: white;
+          border: solid 1px black;
+          color: black;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+

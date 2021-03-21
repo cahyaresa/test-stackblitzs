@@ -23,12 +23,12 @@ export const headerLayoutConfig = {
 
 export const headerCmsConfig = <CmsConfig>{
     cmsComponents: {
-        MktHeaderLogoComponent: {
+      MktHeaderLogoComponent: {
         component: MktHeaderLogoComponent
       },
-      SimpleBannerComponent:{
-        component: MktHeaderLogoComponent
-      }
+      // SimpleBannerComponent:{
+      //   component: MktHeaderLogoComponent
+      // }
     },
   };
 

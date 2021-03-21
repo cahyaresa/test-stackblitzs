@@ -1,0 +1,220 @@
+.mostViewed-container {
+  margin-top: 51px;
+  margin-bottom: 50px;
+  @media (max-width: 425px) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.mostViewed-container .mostViewed-title {
+  margin-bottom: 22px;
+  padding-left: 10px;
+  @media (max-width: 1024px) {
+    padding-left: 7px;
+  }
+  @media (max-width: 425px) {
+    padding-left: 5px;
+  }
+}
+
+.mostViewed-container .mostViewed-title .title {
+  @media (max-width: 768px) {
+    width: 142px;
+    height: 17px;
+    font-family: $rubik-medium;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.86;
+    letter-spacing: normal;
+    text-align: left;
+    color: #404041;
+  }
+  @include screen(tablet) {
+    width: 142px;
+    height: 17px;
+    font-family: $rubik-medium;
+    font-size: 19px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.86;
+    letter-spacing: normal;
+    text-align: left;
+    color: #404041;
+  }
+  @include screen(desktop-small) {
+    width: 142px;
+    height: 17px;
+    font-family: $rubik-medium;
+    font-size: 21px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.86;
+    letter-spacing: normal;
+    text-align: left;
+    color: #404041;
+  }
+  @include screen(desktop-medium) {
+    width: 142px;
+    height: 17px;
+    font-family: $rubik-medium;
+    font-size: 21px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.86;
+    letter-spacing: normal;
+    text-align: left;
+    color: #404041;
+  }
+  @include screen(desktop-large) {
+    width: 213px;
+    height: 25px;
+    font-family: $rubik-medium;
+    font-size: 21px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.86;
+    letter-spacing: normal;
+    text-align: left;
+    color: #404041;
+  }
+}
+
+.mostViewed-container .mostViewed-title .viewAll {
+  float: right;
+  text-align: right;
+  @media (max-width: 768px) {
+    width: 78px;
+    height: 14px;
+    font-family: $rubik-normal;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    color: #2666ee;
+  }
+  @include screen(tablet) {
+    width: 110px;
+    height: 14px;
+    font-family: $rubik-normal;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    color: #2666ee;
+  }
+  @include screen(desktop-small) {
+    width: 110px;
+    height: 20px;
+    font-family: $rubik-normal;
+    font-size: 17px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    color: #2666ee;
+  }
+  @include screen(desktop-medium) {
+    width: 120px;
+    height: 20px;
+    font-family: $rubik-normal;
+    font-size: 17px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    color: #2666ee;
+  }
+  @include screen(desktop-large) {
+    width: 120px;
+    height: 20px;
+    font-family: $rubik-normal;
+    font-size: 17px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    color: #2666ee;
+  }
+}
+
+.mostViewed-container .mostViewed-title .viewAll-arrow {
+  @media (max-width: 768px) {
+    transform: rotate(270deg);
+    &:before {
+      position: relative;
+      font-size: 8px;
+      right: 4px;
+      top: 5px;
+      content: '\e942';
+      font-family: 'icomoon' !important;
+      color: #2666ee;
+      float: right;
+    }
+  }
+  @include screen(tablet) {
+    transform: rotate(270deg);
+    &:before {
+      position: relative;
+      font-size: 11px;
+      right: 4px;
+      top: 5px;
+      content: '\e942';
+      font-family: 'icomoon' !important;
+      color: #2666ee;
+      float: right;
+    }
+  }
+  @include screen(desktop-small) {
+    transform: rotate(270deg);
+    &:before {
+      position: relative;
+      font-size: 11px;
+      right: 4px;
+      top: 5px;
+      content: '\e942';
+      font-family: 'icomoon' !important;
+      color: #2666ee;
+    float: right;
+    }
+  }
+  @include screen(desktop-medium) {
+    transform: rotate(270deg);
+    &:before {
+      position: relative;
+      font-size: 11px;
+      right: 4px;
+      top: 5px;
+      content: '\e942';
+      font-family: 'icomoon' !important;
+      color: #2666ee;
+      float: right;
+    }
+  }
+  @include screen(desktop-large) {
+    transform: rotate(270deg);
+    &:before {
+      position: relative;
+      font-size: 11px;
+      right: 4px;
+      top: 5px;
+      content: '\e942';
+      font-family: 'icomoon' !important;
+      color: #2666ee;
+      float: right;
+    }
+  }
+}

@@ -1,0 +1,593 @@
+.item__list {
+  background-color: #f7f9ff;
+  margin-top: 30px !important;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  border-radius: 12px;
+
+  .no-top-border{
+    border-top: none !important;
+  }
+
+  .item__list--header {
+
+    li {
+      font-family: Rubik-Normal;
+      font-size: 16px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: 1.19;
+      text-align: left;
+      color: #000000;
+      text-transform: none;
+      background-color: white;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .item__status{
+      padding-left: 15px;
+    }
+  }
+}
+
+.item__list .straight-line {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  border-radius: 0;
+}
+
+.desktop-display {
+  @media (max-width: 991px) {
+    display: none !important;
+  }
+}
+
+.responsive-display {
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
+
+.item__list--item {
+  border-bottom: none !important;
+  font-size: 14px;
+  font-family: Rubik-Normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  display: table-cell;
+  height: 144px;
+
+  .item__product-list {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    display: flex;
+    height: 144px;
+    flex-wrap: wrap;
+
+    @media (max-width: 991px) {
+      height: 190px;
+    }
+
+    .item__product {
+      margin-left: 0px;
+      padding-left: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-right: 15px;
+      display: table-cell;
+
+      @media (max-width: 991px) {
+        padding: 0;
+      }
+
+      .item__image {
+        width: 110px;
+        padding: 0 !important;
+        @media screen and (max-width: 768px) {
+          width: auto
+        }
+
+        .image_content{
+          width: 100px;
+          max-width: 100px;
+          max-height: 105px;
+          border: solid 1px #dbdfe9;
+          border-radius: 5px;
+          background: white;
+          @media screen and (max-width: 768px) {
+            width: 70px;
+            max-width: 70px;
+            max-height: 70px;
+          }
+          img {
+            border: none;
+            max-width: 96px;
+            display: block;
+            margin: 3px auto;
+            width: auto;
+            @media screen and (max-width: 768px) {
+              max-width: 66px;
+              max-height: 60px;
+            }
+          }
+        }
+      }
+
+      .item__information {
+        display: table-cell;
+        vertical-align: middle;
+        line-height: 1.2;
+
+        .item__brand {
+          font-size: 12px;
+          padding-bottom: 5px;
+
+          @media (max-width: 991px) {
+            font-size: 10px;
+            padding-top: 2px;
+            padding-bottom: 0;
+          }
+        }
+
+        .item__product__name {
+          font-family: Rubik-Medium;
+          font-weight: 500;
+          padding-bottom: 5px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          max-height: 31px;
+
+          @media (max-width: 991px) {
+            font-size: 12px;
+            padding-bottom: 0;
+          }
+        }
+
+        .item__product__price {
+          color: #0539f5;
+          padding-bottom: 5px;
+
+          @media (max-width: 991px) {
+            padding-bottom: 0;
+            font-size: 12px;
+          }
+        }
+
+        .item__product__qty {
+          font-size: 12px;
+          color: #929497;
+          padding-bottom: 5px;
+
+          @media (max-width: 991px) {
+            padding-bottom: 4px;
+          }
+        }
+      }
+    }
+
+    .item__date {
+      font-size: 14px;
+      line-height: 1.21;
+      text-align: left;
+      color: #929497;
+      display: inherit;
+      vertical-align: middle;
+      padding-left: 0;
+      padding-top: 62px;
+
+      @media (max-width: 991px) {
+        font-size: 10px;
+        padding-top: 2px;
+        padding-bottom: 0;
+        padding-right: 0;
+        text-align: right;
+        float: right;
+      }
+    }
+
+    .item__payment {
+      font-size: 14px;
+      line-height: 1.21;
+      text-align: left;
+      color: #929497;
+      vertical-align: middle;
+      padding-left: 0;
+      padding-top: 62px;
+
+      @media (max-width: 991px) {
+        font-size: 10px;
+        padding: 0;
+      }
+    }
+
+    .item__shipment {
+      font-size: 14px;
+      line-height: 1.43;
+      text-align: left;
+      color: #929497;
+      display: inherit;
+      vertical-align: middle;
+      padding-left: 0;
+      padding-top: 62px;
+
+      @media (max-width: 991px) {
+        text-align: left;
+        font-size: 10px;
+        padding: 0;
+      }
+    }
+
+    .item__status {
+      text-align: center;
+      vertical-align: middle;
+      padding-left: 15px;
+
+      @media (max-width: 991px) {
+        font-size: 10px;
+        padding: 0;
+      }
+
+      .order-status{
+        text-align: left;
+        text-transform: capitalize;
+        color: #ff6500;
+        padding-top: 62px;
+        padding-left: 0;
+
+        @media (max-width: 991px) {
+          font-size: 10px;
+          padding: 0;
+        }
+      }
+
+      .complete-order {
+        padding-top: 45px;
+        font-size: 14px;
+        font-family: Rubik-Normal;
+
+        @media (max-width: 991px) {
+          font-size: 10px;
+          padding: 0;
+          width: 120px;
+        }
+
+        .btn{
+          min-width: 0;
+          width: 96%;
+          height: 37px;
+          padding: 0;
+          background-color: #ff6500;
+          font-size: 14px;
+          margin: 0 auto;
+
+          @media (max-width: 991px) {
+            font-size: 10px;
+            height: 25px;
+          }
+        }
+        span{
+          line-height: 1.14;
+          color: #929497;
+        }
+      }
+      .arrow-collapse{
+        padding-top: 62px;
+      }
+    }
+
+    .item__created {
+      display: inherit;
+      vertical-align: middle;
+      padding-top: 62px;
+    }
+
+    .item__common {
+      display: inherit;
+      vertical-align: middle;
+      padding-top: 62px;
+      @media (max-width: 991px) {
+        height: 15px;
+        padding: 0;
+        float: right;
+      }
+    }
+
+    .collapse_common {
+
+    }
+
+    .arrow-collapse {
+      float: right;
+      color: #0539f5;
+
+      @media (max-width: 991px) {
+        height: 15px;
+        padding-bottom: 0;
+      }
+    }
+
+    .left-section{
+      padding: 0 0 0 3%;
+    }
+
+    .right-section{
+      padding-left: 10px;
+      padding-right: 0;
+
+      .layer{
+        padding-bottom: 4px;
+        @media (max-width: 991px) {
+          padding-right: 0;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.well {
+  &.well-quinary {
+    background-color: #f7f9ff;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+
+    .left-section__wrapper {
+      padding-left: 0;
+      @media (max-width: 991px) {
+        padding: 0;
+        width: 40%;
+      }
+
+      .label-order__wrapper {
+        font-size: 14px;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        text-align: left;
+        @media (max-width: 991px) {
+          font-size: 10px;
+        }
+
+        .label-order {
+          font-family: $rubik-medium;
+          font-weight: 500;
+          line-height: 1.21;
+          color: #000000;
+          margin-bottom: 10px;
+        }
+
+        .value-order {
+          font-family: $rubik-normal;
+          font-weight: normal;
+          line-height: 1.37;
+          color: #0539f5;
+          margin-bottom: 40px;
+          @media (max-width: 991px) {
+            width: auto;
+            margin-bottom: 28px;
+          }
+        }
+      }
+
+      .phone-number__wrapper {
+        font-size: 14px;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        text-align: left;
+        @media (max-width: 991px) {
+          font-size: 10px;
+        }
+
+        .label-order {
+          font-family: $rubik-medium;
+          font-weight: 500;
+          line-height: 1.21;
+          color: #000000;
+          margin-bottom: 10px;
+        }
+
+        .value-order {
+          font-family: $rubik-normal;
+          font-weight: normal;
+          line-height: 1.37;
+          color: #929497;
+        }
+      }
+    }
+
+    .middle-section__wrapper {
+      @media (max-width: 991px) {
+        padding: 0;
+        width: 56%;
+        float: right;
+      }
+
+      .item__wrapper {
+        left: 3.5%;
+        margin-bottom: 15px;
+
+        @media (max-width: 991px) {
+          left: 0;
+        }
+
+        .sender__wrapper {
+          font-size: 14px;
+          font-stretch: normal;
+          font-style: normal;
+          letter-spacing: normal;
+          text-align: left;
+          margin-bottom: 25px;
+
+          @media (max-width: 991px) {
+            font-size: 10px;
+            padding: 0;
+          }
+
+          .label-order {
+            font-family: $rubik-medium;
+            font-weight: 500;
+            line-height: 1.21;
+            color: #000000;
+            margin-bottom: 10px;
+          }
+
+          .value-order {
+            font-family: $rubik-normal;
+            font-weight: normal;
+            line-height: 1.37;
+            color: #929497;
+            margin-bottom: 40px;
+
+            @media (max-width: 991px) {
+              margin-bottom: 28px;
+            }
+
+            .value-deliveryMode{
+              margin-bottom: 5px;
+            }
+
+            .value-voucherList{
+              margin-bottom: 5px;
+
+              .lihat-semua-button{
+                @media (max-width: 991px) {
+                  font-size: 10px;
+                }
+              }
+            }
+          }
+        }
+
+        .address__wrapper {
+          font-size: 14px;
+          font-stretch: normal;
+          font-style: normal;
+          letter-spacing: normal;
+          text-align: left;
+          @media (max-width: 991px) {
+            font-size: 10px;
+            padding: 0;
+          }
+
+          .label-order {
+            font-family: $rubik-medium;
+            font-weight: 500;
+            line-height: 1.21;
+            color: #000000;
+            margin-bottom: 10px;
+          }
+
+          .value-order {
+            font-family: $rubik-normal;
+            font-weight: normal;
+            line-height: 1.57;
+            color: #929497;
+
+            .order-delivery-name{
+              font-family: $rubik-medium;
+              font-weight: 500;
+              color: #000000;
+            }
+          }
+        }
+      }
+
+      .btn-track-shipment {
+        max-width: 148px;
+        height: 25px;;
+        padding: 0;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .right-section__wrapper{
+      @media (max-width: 991px) {
+        padding: 0;
+        width: 56%;
+        float: right;
+      }
+
+      .orderTotal {
+        font-size: 14px;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        color: #000000;
+        @media (max-width: 991px) {
+          padding: 20px 0 0 0;
+          font-size: 10px;
+        }
+
+        .label-order {
+          font-family: $rubik-normal;
+          font-weight: normal;
+          line-height: 1.54;
+          text-align: left;
+          color: #58595b;
+          padding-left: 0;
+        }
+
+        .text-right_wrapper {
+          padding-right: 0;
+          padding-left: 0;
+
+          .text-right {
+            font-family: $rubik-medium;
+            font-weight: 500;
+            line-height: 1.8;
+            text-align: left;
+            color: #231f20;
+          }
+        }
+
+        .total-tagihan__wrapper {
+          border-top: #cec9cd solid 0.6px;
+          margin-top: 10px;
+          padding: 10px 0 0 0 ;
+
+          .totals_wrapper {
+            padding-left: 0;
+            padding-right: 0;
+
+            .totals {
+              @media (max-width: 991px) {
+                font-size: 10px;
+              }
+              font-size: 14px;
+              font-family: $rubik-medium;
+              font-weight: 500;
+              line-height: 1.54;
+              text-align: left;
+              padding-top: 0;
+            }
+          }
+
+          .total_wrapper {
+            font-family: Rubik-Medium;
+            padding-right: 0;
+            padding-left: 0;
+
+            .totals-value {
+              font-family: $rubik-medium;
+              font-weight: 500;
+              line-height: 1.8;
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+}

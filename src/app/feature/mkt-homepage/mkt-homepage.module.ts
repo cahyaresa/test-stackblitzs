@@ -1,34 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchHompageFilterComponent } from './search-hompage-filter/search-hompage-filter.component';
-import { CmsConfig, ConfigModule } from '@spartacus/core';
+import { ConfigModule } from '@spartacus/core';
 import { RecentNewsComponent } from './recent-news/recent-news.component';
-import { HomepageBannerComponent } from './homepage-banner/homepage-banner.component';
-import { MostViewProductCarouselComponent } from './most-view-product-carousel/most-view-product-carousel.component';
-
-
+import { homepageLayoutConfig, HoepageCmsStructureConfig, homepageCmsConfig } from './config/homepage.config';
+import { MostViewProductsCarouselModule } from './most-view-products-carousel/most-view-products-carousel.module';
+import { MktHomepageBannerModule } from './mkt-homepage-banner/mkt-homepage-banner.module';
+import { MktHomepageBannerCarouselComponent } from './mkt-homepage-banner-carousel/mkt-homepage-banner-carousel.component';
+import { MktSharedModule } from '../mkt-shared/mkt-shared.module';
 
 @NgModule({
-  declarations: [SearchHompageFilterComponent, RecentNewsComponent, MostViewProductCarouselComponent],
+  declarations: [SearchHompageFilterComponent, RecentNewsComponent, MktHomepageBannerCarouselComponent],
   imports: [
     CommonModule,
-    ConfigModule.withConfig({
-      cmsComponents:{
-        SearchFilterHomepageComponent: {
-          component: SearchHompageFilterComponent
-        },
-        RecentNewsComponent:{
-          component: RecentNewsComponent
-        },
-        SimpleResponsiveBannerComponent: {
-          component: HomepageBannerComponent
-        },
-        MostViewProductsCarouselComponent: {
-          component: MostViewProductCarouselComponent
-        }
-      }
-    } as CmsConfig)
+    MktSharedModule,
+    MktHomepageBannerModule,
+    MostViewProductsCarouselModule,
+    ConfigModule.withConfig(homepageLayoutConfig),
+    ConfigModule.withConfigFactory(HoepageCmsStructureConfig),
+    ConfigModule.withConfig(homepageCmsConfig),
+    
   ],
-  entryComponents: [SearchHompageFilterComponent],
+  entryComponents: [SearchHompageFilterComponent, RecentNewsComponent, MktHomepageBannerCarouselComponent],
 })
 export class MktHomepageModule { }

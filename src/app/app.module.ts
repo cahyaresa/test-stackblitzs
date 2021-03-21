@@ -28,7 +28,7 @@ import { FeatureModule } from './feature/feature.module';
         currency: ['IDR'],
         language: ['in'],
         baseSite:['marketplace-spa'],
-        // urlParameters: ['baseSite', 'language', 'currency']
+        urlParameters: ['baseSite', 'language', 'currency']
       },
       i18n: {
         resources: translations,

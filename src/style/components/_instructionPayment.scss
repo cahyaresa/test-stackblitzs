@@ -1,0 +1,373 @@
+.main__inner-wrapper{
+  .payment-time-wording{
+    margin-top: 50px;
+    width: auto;
+    height: 27px;
+    font-family: $rubik-medium;
+    font-size: 22px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.98;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    @include screen(mobile){
+      margin-top: 0;
+      height: 24px;
+      font-size: 14px;
+      line-height: 1.16;
+    }
+    @include screen(mobile-small){
+      font-size: 14px;
+    }
+  }
+
+  .payment-time-counting{
+    width: auto;
+    height: 24px;
+    font-family: $rubik-normal;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.08;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    @include screen(mobile-small){
+      font-size: 14px;
+      height: 0;
+      line-height: 1.8;
+    }
+    @include screen (mobile){
+      height: 19px;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+  }
+  .wrapper-payment{
+    margin-top: 60px;
+    @include screen(mobile-small){
+      margin-top: 42px;
+    }
+    @include screen(mobile){
+      margin-top: 28px;
+    }
+    .virtualPaymentInstruction{
+      height: 641.1px;
+      border-radius: 4px;
+      box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.05);
+      border: solid 0.6px #e5e5e5;
+      margin: 10px;
+      width: 47%;
+      @include screen(mobile){
+        width: 100%;
+        height: 550px;
+      }
+      @include screen(tablet){
+        width: 97%;
+      }
+      @include screen(desktop){
+        width: 47%;
+      }
+      .leftwrapper{
+        margin-top: 60px;
+        @include screen(mobile){
+          margin-top: 36px;
+        }
+        .time{
+          width: auto;
+          height: 19px;
+          font-family: $rubik-normal;
+          font-size: 16px;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.2;
+          letter-spacing: normal;
+          text-align: center;
+          color: #000000;
+          @include screen(mobile){
+            height: 38px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.37;
+          }
+        }
+        .warning{
+          width: auto;
+          height: 34px;
+          font-family: $rubik-normal;
+          font-size: 14px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.2;
+          letter-spacing: normal;
+          text-align: center;
+          color: #6d6e70;
+          margin-top: 35px;
+          @include screen(mobile){
+            height: 38px;
+            font-size: 10px;
+            line-height: 1.3;
+            color: #707070;
+          }
+        }
+        .imgva{
+          height: 90px;
+          object-fit: contain;
+          text-align: center;
+          margin-top: 12px;
+          @include screen(mobile){
+            margin-top: 0;
+          }
+          img{
+            width: 155px;
+            max-height: 100px;
+            @include screen(mobile){
+              max-height: 80px;
+            }
+          }
+        }
+        .vanumber{
+          width: auto;
+          height: 19px;
+          font-family: $rubik-normal;
+          font-size: 16px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.2;
+          letter-spacing: normal;
+          text-align: center;
+          color: #000000;
+          margin-bottom: 20px;
+          @include screen(mobile){
+            height: 14px;
+            font-size: 12px;
+            line-height: 1.6;
+          }
+          .vanumbershow{
+            width: auto;
+            height: 28px;
+            font-family: $rubik-medium;
+            font-size: 24px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.6;
+            letter-spacing: normal;
+            text-align: center;
+            color: #000000;
+            @include screen(mobile){
+              height: 22px;
+              font-size: 18px;
+              font-weight: 500;
+              line-height: 1.6;
+            }
+          }
+        }
+        .copyva{
+          width: auto;
+          height: 17px;
+          font-family: $rubik-normal;
+          font-size: 14px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.2;
+          letter-spacing: normal;
+          text-align: center;
+          margin-top: 48px;
+          margin-bottom: 20px;
+          a{
+            text-decoration: underline;
+            color: #0539f5;
+            @include screen(mobile){
+              height: 14px;
+              font-size: 12px;
+              line-height: 1.4;
+              margin-top: 58px;
+            }
+          }
+        }
+        .totalpayment{
+          width: auto;
+          height: 19px;
+          font-family: $rubik-normal;
+          font-size: 16px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.2;
+          letter-spacing: normal;
+          text-align: center;
+          color: #000000;
+          margin-top: 46px;
+          @include screen(mobile){
+            height: 14px;
+            font-size: 12px;
+            line-height: 1.6;
+            margin-top: 36px;
+          }
+          .totalpaymentshow{
+            width: auto;
+            height: 28px;
+            font-family: $rubik-medium;
+            font-size: 24px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.2;
+            letter-spacing: normal;
+            text-align: center;
+            color: #000000;
+            margin-top: 4px;
+            @include screen(mobile){
+              height: 22px;
+              font-size: 18px;
+              font-weight: 500;
+              line-height: 1.1;
+            }
+          }
+        }
+
+        .copytotalpayment{
+          width: auto;
+          height: 17px;
+          font-family: $rubik-normal;
+          font-size: 14px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.2;
+          letter-spacing: normal;
+          text-align: center;
+          color: #0539f5;
+          margin-top: 48px;
+          text-decoration: underline;
+          a{
+            color: #0539f5;
+            @include screen(mobile){
+              height: 14px;
+              font-size: 12px;
+              line-height: 1.4;
+            }
+          }
+        }
+        .transactionnumber{
+          width: auto;
+          height: 19px;
+          font-family: $rubik-normal;
+          font-size: 16px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.2;
+          letter-spacing: normal;
+          text-align: center;
+          color: #000000;
+          margin-top: 46px;
+          @include screen(mobile){
+            height: 14px;
+            font-size: 12px;
+            line-height: 1.6;
+            margin-top: 36px;
+          }
+          .transactionnumbershow{
+            width: auto;
+            height: 28px;
+            font-family: $rubik-medium;
+            font-size: 24px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.2;
+            letter-spacing: normal;
+            text-align: center;
+            color: #2769f6;
+            margin-top: 10px;
+            @include screen(mobile){
+              height: 22px;
+              font-size: 18px;
+              line-height: 1.6;
+            }
+          }
+        }
+      }
+    }
+    .intruction-payment-wording{
+      width: 47%;
+      @media screen and (max-width: 991px){
+        width: 100%;
+      }
+    }
+  }
+}
+
+#snackbar {
+  @include screen(mobile){
+    visibility: hidden;
+    min-width: 100px;
+    margin-left: -50px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 8px;
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    bottom: 100px;
+    font-size: 12px;
+    font-family: $rubik-normal;
+  }
+  @include screen(desktop){
+    display: none;
+  }
+}
+
+#snackbar.show {
+  @include screen(mobile){
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  @include screen(desktop){
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 100px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 100px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 100px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 100px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+.awaiting-payment-disclaimer{
+  font-family: Rubik;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #6d6e70;
+}

@@ -1,0 +1,45 @@
+
+.pagination-bar.bottom{
+  margin: 30px 0;
+
+  @media (max-width: 991px){
+    margin-bottom: 45px;
+  }
+
+  .pagination-toolbar{
+    margin: 10px 0;
+    padding: 0;
+
+    .pagination-wrap{
+      padding: 0 15px;
+      text-align: center;
+
+      @media (max-width: 991px){
+        padding: 0 20px;
+      }
+      .pagination {
+        width: auto;
+        margin: 0;
+
+        .pagination-prev {
+          margin: 0 5px;
+
+          .pagination-arrows-left{
+            width: 20px;
+            margin: 0;
+            padding-right: 2px;
+          }
+        }
+
+        .pagination-next {
+          margin: 0 5px;
+
+          .pagination-arrows-right {
+            width: 20px;
+            padding-left: 2px;
+          }
+        }
+      }
+    }
+  }
+}

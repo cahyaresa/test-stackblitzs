@@ -1,0 +1,19 @@
+<!-- <p>homepage-banner works!</p> -->
+
+<cx-generic-link *ngIf="data$ | async as data" [url]="data.urlLink" [target]="getTarget(data)">
+    <p class="headline" *ngIf="data.headline" [innerHTML]="data.headline"></p>
+    <cx-media [container]="data.media"></cx-media>
+    <p class="name" *ngIf="data.name" [innerHTML]="data.name"></p>
+    <p class="content" *ngIf="data.content" [innerHTML]="data.content"></p>
+</cx-generic-link>
+
+<!-- <cx-carousel [items]="getItems() | async" [template]="template" itemWidth="100%" class="inline-navigation"></cx-carousel>
+
+<ng-template #template let-item="item">
+    <ng-container [cxComponentWrapper]="{
+      flexType: item.typeCode,
+      typeCode: item.typeCode,
+      uid: item?.uid
+    }">
+    </ng-container>
+</ng-template> -->

@@ -14,8 +14,8 @@ export const productDetailLayoutConfig = {
           slots: [
              'MktProductDetails',
              'UpSelling',
-             'CrossSelling',
-             'VariantSelector',
+            //  'CrossSelling',
+            //  'VariantSelector'
           ],
         },
       },
@@ -30,7 +30,7 @@ export const productDetailCmsConfig = <CmsConfig>{
       CMSTabParagraphComponent: {
         component: MktProductTabsComponent,
       },
-      ProductReferencesComponent: {
+      UpsellCarouselComponent: {
         component: MktUpSellingReferencesComponent
       },
       StockNotificationComponent: {

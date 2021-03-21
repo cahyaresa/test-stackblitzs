@@ -1,0 +1,128 @@
+.breadcrumb-wrapper{
+    box-shadow: (0 5px 5px 0 rgba(0, 0, 0, 0.16));
+    width: 100%;
+    margin-bottom: 50px;
+}
+.breadcrumb-section{
+    background: #f8f8f9;
+    padding: 0;
+    @include screen(desktop) { 
+        background: none;
+        padding-top: 8px;
+    }
+	.breadcrumb {
+		font-family: $rubik-normal;
+		font-size: $font-size-x-small;
+        text-align: left;
+        text-transform: capitalize;
+        background: none;
+        line-height: 12px;
+		li{
+			&+ li:before{
+                padding: 0 5px;
+                content: '\003E \003E';
+                color: #0539f5;
+                letter-spacing: -1px;
+                position: relative;
+                top: 1px;
+                font-size: $font-size-small;
+            }
+            a{
+                color: #0539f5;
+                font-size: $font-size-x-small;
+            }
+        }	
+        &> .active{
+            color: #808fa3;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 145px;
+            @media (max-width: 425px) {
+                max-width: 105px;
+            }
+            @media (max-width: 768px) {
+                max-width: 105px;
+            }
+            @media (max-width: 991px) {
+                max-width: 105px;
+            }
+        }
+		@include screen(desktop) { 
+            font-size: $font-size-medium;
+            line-height: 17px;
+            li a{
+                font-size: $font-size-medium;
+            }
+            .active{
+                padding: 0;
+            }
+		}
+	}
+}
+
+.header-nav-items{ 
+    padding:5px 0;
+    @include screen(desktop) {
+        padding:15px 0;
+    }
+    .order-history, .add-cart .mini-cart-link {
+        font-family: $rubik-normal;
+        font-size: $font-size-small; 
+        padding:5px 5px 5px 33px;
+        display: inline-block;
+        color: #6d6e70;
+        font-weight: 500;
+        &:before {
+            background-size: 100%;
+            content: '';
+            position: absolute;
+            left: 15px; 
+            top: 5px;    
+            width: 22px;  
+            height: 20px;
+            color: #2769f6;    
+        } 
+        @include screen(desktop) {
+            font-family: $rubik-medium;
+            font-size: $font-size-regular;
+            padding:0 0 5px 30px;
+            &:before {
+                width: 26px;
+                height: 24px;  
+                left: 12px; 
+                top: -1px;                
+            }
+        }
+    }
+    .order-history:before{
+        background-image: url(../images/pdp-icons/icon-order-history.svg);
+    }
+    
+    .add-cart{
+        .mini-cart-link:before{
+            background-image: url(../images/pdp-icons/icon-add-cart.svg);
+            width: 26px;
+            height: 26px;
+            left: 0;
+            top: 3px;
+            @include screen(desktop) {
+                top: -1px;
+            }
+        }
+        .mini-cart-count{
+            display: inline-block;
+        }
+        .mini-cart-price, .mini-cart-icon{
+            display: none;
+        }
+        .item-count{
+            font-family: $rubik-bold;
+            color: #231f20;
+            @include screen(mobile) {
+                font-family: $rubik-medium;
+                font-size: $font-size-medium;
+            }
+        }
+    }
+}

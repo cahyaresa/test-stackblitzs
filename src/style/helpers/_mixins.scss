@@ -1,0 +1,338 @@
+@mixin respond-to($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media #{inspect(map-get($breakpoints, $breakpoint))} {
+            @content;
+        }
+    }
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "+"Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+
+
+
+/*@mixin fontSize($sizeValue: 1.6) {
+    font-size: ($sizeValue * 10) + px;
+    font-size: $sizeValue + rem;
+}*/
+
+
+/*Function for converting a px based font-size to rem.*/
+
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+
+
+/*Mixin that will include the fall back px declaration as well as the calculated rem value.*/
+
+@mixin fontSize($size) {
+    font-size: $size; //Fallback in px
+    font-size: calculateRem($size);
+}
+
+
+@mixin calc($property, $expression) {
+    #{$property}: -moz-calc(#{$expression});
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}
+
+i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.down-arrow {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */
+}
+
+@mixin border($direction, $width, $style, $color) {
+    border-#{$direction}: $width $style $color;
+}
+
+@mixin border-default($size,$type,$color) {
+  border: $size $type $color;
+}
+
+@mixin box-shadow($xPosition: null, $yPosition: null, $blur: null, $spread: null, $color: null) {
+    -webkit-box-shadow: $xPosition $yPosition $blur $spread $color;
+    -moz-box-shadow: $xPosition $yPosition $blur $spread $color;
+    box-shadow: $xPosition $yPosition $blur $spread $color;
+}
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.clearfix {
+    @include clearfix();
+}
+
+// Example code transition($option)
+
+/*
+@include border-radius(20px);
+*/
+
+@mixin transition($option) {
+    -webkit-transition: $option;
+    -moz-transition: $option;
+    -o-transition: $option;
+    transition: $option;
+}
+
+// Example code transition($option)
+
+/*
+@include transition(opacity 0.3s ease-in-out);
+*/
+
+@mixin position($position, $top, $right, $bottom, $left) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+// Example code @mixin position
+
+/*
+@include position(absolute, null, null, null, 0);
+@include position(absolute, 10px, 10px, 10px, 0);
+*/
+
+@mixin screen($point) {
+    @if $point==mobile {
+        @media (max-width: 767px) {
+            @content
+        }
+    }
+    @else if $point==mobile-small {
+        @media (max-width: 321px) {
+            @content;
+        }
+    }
+    @else if $point==mobile-medium {
+        @media (min-width: 321px) and (max-width: 376px) {
+            @content;
+        }
+    }
+    @else if $point==mobile-large {
+        @media (min-width: 376px) and (max-width: 426px) {
+            @content;
+        }
+    }
+    @else if $point==mobile-only {
+        @media (max-width: 992px) {
+            @content;
+        }
+    }
+    @else if $point==tablet {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+    @else if $point==tablet-small {
+        @media (min-width: 426px) and (max-width: 768px) {
+            @content;
+        }
+    }
+    @else if $point==tablet-only {
+        @media (min-width: 768px) and (max-width: 991px) {
+            @content;
+        }
+    }
+    @else if $point==laptop {
+        @media (min-width: 992px) and  (max-width: 1024px) {
+            @content;
+        }
+    }
+    @else if $point==laptop-large {
+        @media (min-width: 1026px) {
+            @content;
+        }
+    }
+    @else if $point==large {
+        @media (min-width: 1441px) {
+            @content;
+        }
+    }
+    @else if $point==xlarge {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else if $point==desktop {
+        @media (min-width: 992px) {
+            @content;
+        }
+    }
+    @else if $point==m-small {
+        @media (max-width: 320px) {
+            @content;
+        }
+    }
+    @else if $point==m-med {
+        @media (max-width: 375px) and (min-width: 321px) {
+            @content;
+        }
+    }
+    @else if $point==m-lar {
+        @media (max-width: 425px) and (min-width: 376px) {
+            @content;
+        }
+    }
+    @else if $point==desktop-small {
+        @media (max-width: 1024px) and (min-width: 769px) {
+            @content;
+        }
+    }
+    @else if $point==desktop-medium {
+        @media (max-width: 1366px) and (min-width: 1025px) {
+            @content;
+        }
+    }
+    @else if $point==desktop-large {
+        @media (min-width: 1367px) {
+            @content;
+        }
+    }
+    @else if $point==desktop-only {
+        @media (min-width: 992px) and (max-width: 1199px) {
+            @content;
+        }
+    }
+}
+
+// Example code screen($point)
+
+/*
+.test {
+  font-size: 12px; // Mobile first approch
+
+  @include screen(tablet) {  // Works > 768
+    font-size: 14px;
+  }
+  @include screen(desktop) {  // Works >= 992
+    font-size: 20px;
+  }
+  @include screen(desktop-only) {  // Works > 992 to 1199
+    font-size: 17px;
+  }
+  @include screen(large) {    // Works > 1200
+    font-size: 30px;
+  }
+  @include screen(mobile-only) {    // Works < 992
+    font-size: 20px;
+  }
+}
+*/
+
+
+/* Mixin */
+
+@mixin align-vmiddle($position) {
+    position: $position;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+// Usage align-vmiddle
+
+/*.element p {
+  @include align-vmiddle(absolute);
+}*/
+
+// top value
+@mixin align-middlePos($position) {
+    top: $position;
+    -webkit-transform: translateY(-($position));
+    -ms-transform: translateY(-($position));
+    transform: translateY(-($position));
+}
+@mixin rotateDeg($rotate-value) {
+    -webkit-transform:rotate($rotate-value);
+    -moz-transform:rotate($rotate-value);
+    -o-transform:rotate($rotate-value);
+    -ms-transform:rotate($rotate-value);
+    transform:rotate($rotate-value);
+}
+// Usage rotateDeg
+// @include rotateDeg(90deg)
+
+
+//Scroll bar mixin
+@mixin scrollbar(){
+  /* width */
+  ::-webkit-scrollbar {
+      width: 7px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+      border-radius: 10px;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+      background: #bebebe;
+      border-radius: 10px;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+      background: #bebebe;
+  }
+}
+
+@mixin loader-img(){
+    background: #fff url(./../images/ajax-loader.gif) no-repeat center;
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+@mixin no-padding($side) {
+    @if $side == 'all' {
+        .no-padding {
+            padding: 0 !important;
+        }
+    } @else {
+        .no-padding-#{$side} {
+            padding-#{$side}: 0 !important;
+        }
+    }
+}
+
+@include no-padding("left");
+@include no-padding("right");
+@include no-padding("top");
+@include no-padding("bottom");
+@include no-padding("all");

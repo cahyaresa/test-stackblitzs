@@ -1,0 +1,206 @@
+$form: "form";
+.form-group {
+    label {
+        width: auto;
+        font-family: $rubik-normal;
+        font-size: $font-size-medium;
+        text-align: left;
+        color: $cod-gray-color;
+        display: block;
+        line-height: 1.71;
+        text-transform: capitalize;
+    }
+    ._email {
+        height: 45px;
+        border-radius: 22.5px;
+        border: solid 1px $alto-color;
+        @media screen and (min-width: map-get($breakpoints, small)) {
+            width: 457px;
+        }
+    }
+    .__number-code {
+        width: 75px;
+        height: 45px;
+        border-radius: 22.5px;
+        border: solid 1px $alto-color;
+        margin-right: 5px;
+        display: inline-block;
+        background: $alabaster-color;
+        text-align: center;
+        position: relative;
+        //top: 50px;
+    }
+    ._number {
+        width: 80%;
+        height: 45px;
+        border-radius: 22.5px;
+        border: solid 1px $alto-color;
+        display: inline-block;
+        position: relative;
+        //left:80px;
+        @media screen and (max-width: map-get($breakpoints, medium)) {
+            width: 71%;
+        }
+    }
+    .error {
+        color: $alert-red;
+        font-size: 14px;
+    }
+    input, textarea, select { 
+        border-radius: 22.5px;
+        border: solid 1px $alto-color; 
+    }
+    textarea {
+        width: 100%;
+        padding: 20px;
+    }
+}
+/*cart page input fix*/
+.item__quantity  {
+    input {
+        border: solid 1px $alto-color;
+        border-radius: 22.5px; 
+    }
+}
+/*cart page input fix ends*/
+select.form-control { 
+    border-radius: 3px;
+    border: solid 1px $alto-color;
+    text-transform: none;
+}
+.radio input[type="radio"],
+.radio-inline input[type="radio"], 
+.checkbox input[type="checkbox"],
+ .checkbox-inline input[type="checkbox"] {
+     position: relative;
+ }
+.field-box {
+    padding-bottom: 5px;
+}
+
+label {
+    &.error {
+        color: $alert-red!important;
+    }
+}
+input, textarea, select {
+
+    &.error {
+        border-color: $alert-red!important;
+    }
+}
+
+.__dropdown-content {
+    &.error-select {
+        .select2-selection--single {
+            border-color: $alert-red!important;
+        }
+    }
+    .error-select {
+        border-color: $alert-red!important;
+    }
+}
+
+
+.space-top20 {
+    position: relative;
+    top: 20px;
+}
+
+.xs-space20 {
+    @media screen and (max-width: map-get($breakpoints, medium)) {
+        position: relative;
+        top: 20px;
+    }
+}
+
+.for-mobile-number {
+    position: relative;
+    //top: -50px;
+    label[for="code"] {
+        display: none !important;
+    }
+    ._number-code {
+        width: 75px;
+        height: 45px;
+        padding: 0 !important;
+        border-radius: 22.5px;
+        border: solid 1px $alto-color;
+        margin-right: 5px;
+        display: inline-block;
+        background: $alabaster-color;
+        text-align: center;
+    }
+}
+.make-this-default {
+	.custom-radio-button:checked + .radio-checkbox, 
+	.custom-radio-button:not(:checked) + .radio-checkbox {
+		color: $black-color;
+		font-size: 14px;
+		line-height: 24px;
+		&:before {
+			top: 1px;
+		}
+		&:after {
+			top: 4px;
+		}
+	}
+}
+
+ 
+
+.error-msg {
+    color: #e2400c;
+    display: none;
+    .hints {
+        color: #e2400c;
+    }
+}
+
+
+.send,
+.submit {
+    font-family: $font-family;
+    background-color: $azure-radiance-color;
+    border: none;
+    width: 140px;
+    height: 45px;
+    border-radius: 22.5px;
+    font-size: $font-size-small;
+    color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+    @include screen(desktop) {
+		width: 166px;
+    }
+}
+
+
+
+.cancel {
+    font-family: $font-family;
+    background-color: $white-color;
+    border: 1px solid #131313;
+    width: 140px;
+    height: 45px;
+    border-radius: 22.5px;
+    font-size: $font-size-small;
+    color: $black-color;
+    margin-left: 30px;
+    @media screen and (max-width: map-get($breakpoints, medium)) {
+        margin-left:0;
+    }
+    @include screen(desktop) {
+		width: 166px;
+    }
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+
+.for-cancel {
+    .cancel {
+        @media screen and (max-width: map-get($breakpoints, medium)) {
+            width: 100%;
+        }
+    }
+}

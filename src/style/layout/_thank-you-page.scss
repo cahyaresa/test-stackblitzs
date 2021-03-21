@@ -1,0 +1,157 @@
+.checkout-success {
+  .checkout-success__body {
+    font-family: Rubik-Normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+
+    .checkout-success__body__headline__image {
+      @media screen and (max-width: 425px) {
+        width: 52px;
+        height: 52px;
+      }
+      font-family: auto;
+    }
+
+    .checkout-success__body__headline__message{
+      font-family: Rubik-Medium;
+    }
+
+    .checkout-success__body__headline {
+      font-size: 18px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      font-family: Rubik-Normal;
+      color: #000000;
+    }
+
+    .congrats {
+      max-width: 100%;
+      height: 43px;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 1.2;
+      color: #000000;
+      margin-bottom: 6px;
+
+      @media screen and (max-width: 425px) {
+        height: 24px;
+        font-size: 20px;
+        //line-height: 2.16;
+      }
+    }
+
+    .order-succeed {
+      max-width: 100%;
+      font-size: 18px;
+      text-transform: none;
+      font-weight: normal;
+    }
+
+    p {
+      max-width: 100%;
+      //height: 22px;
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 1.2;
+      color: #929497;
+
+      @media screen and (max-width: 425px) {
+        font-size: 14px;
+        line-height: 1.54;
+      }
+
+      b {
+        color: #000000;
+      }
+    }
+
+    .order-succeed-orderno-label {
+        max-width: 100%;
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 1.2;
+        color: #929497;
+
+        .orderno-label {
+          margin-bottom: 10px;
+          display: block;
+        }
+
+        .orderconfirmation-label {
+          margin-bottom: 10px;
+          display: block;
+        }
+
+        @media screen and (max-width: 425px) {
+          font-size: 14px;
+          line-height: 1.54;
+        }
+
+        b {
+          color: #000000;
+        }
+    }
+  }
+}
+
+.disclaimer-thankyoupage__wrapper{
+  text-align: -moz-right;
+  text-align: -webkit-right;
+  margin-top: 22px;
+  margin-bottom: 12px;
+  @include screen(mobile){
+    margin-top: 30px;
+    margin-bottom: 12px;
+  }
+  .disclaimer-thankyoupage{
+    @include screen(mobile){
+      width: auto;
+      text-align: center;
+      font-size: 12px;
+    }
+    width: 351px;
+    height: 57px;
+    font-family: $rubik-normal;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    text-align: right;
+    color: #6d6e70;
+    .blue-text {
+      color: #2769f6;
+    }
+  }
+}
+
+.btn-orderHistory{
+  justify-content: flex-end;
+}
+.pull-right{
+  padding-top: 10px;
+  .continue__shopping{
+    @include screen(desktop){
+      padding-right: 0;
+    }
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+
+.transaction-detail {
+  font-size: 12px;
+  font-family: Rubik;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+}
+
+.blue-text {
+  color: #2769f6;
+}

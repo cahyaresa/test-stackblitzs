@@ -14,7 +14,7 @@ import { MktStockNotificationComponent } from './mkt-stock-notification/mkt-stoc
 import { MktProductImageComponent } from './mkt-product-image/mkt-product-image.component';
 import { MktProductDetailsService } from './Mkt-product-details.service';
 import { MktProductAddToCartComponent } from './mkt-product-add-to-cart/mkt-product-add-to-cart.component';
-
+import { MktProductTabsWrapperComponent } from './mkt-product-tabs-wrapper/mkt-product-tabs-wrapper.component';
 
 
 @NgModule({
@@ -25,7 +25,9 @@ import { MktProductAddToCartComponent } from './mkt-product-add-to-cart/mkt-prod
     MktStockNotificationComponent, 
     MktProductImageComponent,
     MktProductIntroComponent,
-    MktProductAddToCartComponent
+    MktProductAddToCartComponent,
+    MktProductTabsWrapperComponent,
+    
   ],
   imports: [
     CartComponentModule,
@@ -55,7 +57,8 @@ import { MktProductAddToCartComponent } from './mkt-product-add-to-cart/mkt-prod
     MktProductTabsComponent, 
     MktStockNotificationComponent, 
     MktProductImageComponent,
-    MktProductAddToCartComponent
+    MktProductAddToCartComponent,
+    MktProductTabsWrapperComponent
   ],
   providers: [
     MktProductDetailsService,

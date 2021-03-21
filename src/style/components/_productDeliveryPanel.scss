@@ -1,0 +1,112 @@
+.box-delivery{
+    border: solid 1px #dbdfe9;
+    border-radius: 5px;
+    height: 180px;
+    margin-left: -30%;
+    justify-content: center;
+    height: max-content;
+    padding-bottom: 20px;
+    @include screen(mobile-small){
+      max-width: 108%;
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+    @include screen(mobile-medium){
+      max-width: 106%;
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+    @include screen(mobile-large){
+      max-width: 104%;
+      margin-left: -8px;
+    }
+    @include screen(tablet-small){
+      max-width: 100%;
+      margin-left: 0px !important;
+    }
+    @include screen(tablet-only){
+      max-width: 100%;
+      margin-left: 0px !important;
+    }
+    @include screen(laptop){
+      max-width: 140%;
+      margin-left: -20px;
+    }
+    @include screen(laptop-large){
+      max-width: 140%;
+      margin-left: -30px;
+    }
+    @include screen(xlarge){
+      max-width: 124%;
+      float: right;
+    }
+  @media screen and (min-width: 992px){
+    width: max-content !important;
+  }
+    .pilihan-pengiriman{
+      width: 126px;
+      height: 17px;
+      font-family: Rubik-medium;
+      font-size: 13px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.54;
+      letter-spacing: normal;
+      text-align: left;
+      color: #404041;
+      margin-left: 10px;
+      margin-top: 10px;
+      @include screen(mobile){
+        width: 100%;
+        margin-left: 10px;
+      }
+    }
+    .delivery-method-list{
+      margin-left: 20px;
+      margin-top: 20px;
+      margin-right: 5px;
+        .delivery-method-container {
+          .icons-delivery-method {
+            width: 20px;
+            height: 25px;
+            object-fit: contain;
+          }
+
+          .icons-delivery-method-shipment {
+            height: 33px;
+            object-fit: contain;
+          }
+
+          .shipment-child-option {
+            font-family: Rubik-normal;
+            font-size: 11px;
+            color: #6d6e70;
+            list-style: none;
+            list-style-position: inside;
+
+            li::before {
+              content: "\2022";
+              color: #dbdfe9;
+              font-weight: bold;
+              display: inline-block;
+              width: 1em;
+              font-size: 1.5em;
+            }
+          }
+
+          .delivery-method-name {
+            font-family: Rubik-normal;
+            font-size: 11px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: #6d6e70;
+            padding-right: 0;
+            padding-left: 10px;
+          }
+        }
+    }
+  }

@@ -1,0 +1,859 @@
+.order-summary{
+  margin-top: 0;
+}
+
+.subtotals{
+  width: 100%;
+  display: flex;
+  flex-wrap: inherit;
+}
+.checkorder_box {
+  margin-top: 40px;
+  @media (max-width: 767px) {
+    margin-top: 10px;
+    padding: 0 30px !important;
+  }
+  .checkout-summary-headline{
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+  .checkout-order {
+    width: 584px;
+    height: 480px;
+    border-radius: 4px;
+    border: solid 0.3px #dbdfe9;
+    background-color: white;
+    margin-top: -5px;
+    @include screen(mobile){
+      width: 90%;
+      height: 100%;
+      margin-left: 15px;
+      margin-top: -25px;
+    }
+    @include screen(tablet){
+      width: 100%;
+    }
+    @include screen(desktop){
+      width: 93%;
+      margin-left: 20px;
+    }
+    .checkout-summary{
+      border-bottom: solid 0.3px #dbdfe9;
+      border-radius: 4px 4px 0 0;
+      background-color: #f8f8f9;
+      font-size: $font-size-regular;
+      font-family: $rubik-medium;
+      font-stretch: normal;
+      font-style: normal;
+      font-weight: 500;
+      color: #231f20;
+      padding-top: 13px;
+      padding-left: 17px;
+
+      @include screen(mobile){
+        height: 41px;
+        font-size: $font-size-medium;
+        padding-top: 10px;
+      }
+      @include screen(tablet){
+
+      }
+      @include screen(desktop){
+        padding-bottom: 12px;
+        padding-top: 15px;
+      }
+    }
+    .checkout-order-summary-list-heading{
+      margin-left: 10px;
+      font-size: $font-size-x-regular;
+      font-weight: normal;
+      color: #58595b;
+      @include screen(mobile){
+        width: 100%;
+      }
+      @include screen(tablet){
+      }
+      @include screen(desktop){
+
+      }
+    }
+    .js-order-totals{
+
+      padding-top: 30px;
+
+      .row-subtotals{
+        display: inherit;
+        justify-content: space-between;
+        width: 100%;
+        @include screen(mobile){
+          margin-top: -10px;
+          width: 100%;
+        }
+        @include screen(tablet){
+
+        }
+        .subtotal {
+          color: #58595b !important;
+          font-size: $font-size-x-regular;
+          font-family: $rubik-normal;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          letter-spacing: normal;
+          text-align: left;
+          flex: 1;
+          @include screen(mobile){
+            font-size: $font-size-small;
+            width: 100%;
+          }
+          @include screen(tablet){
+            font-size: $font-size-medium;
+          }
+          @include screen(desktop){
+            font-size: $font-size-x-regular;
+          }
+          @media screen and (max-width: 374px){
+            font-size: 10px !important;
+          }
+        }
+        .subtotal-value{
+          flex: 1;
+          color: #231f20;
+          font-size: $font-size-xx-regular;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          font-family: Rubik-medium;
+
+          letter-spacing: normal;
+          text-align: right;
+          @include screen(mobile){
+            font-size: $font-size-small;
+
+            width: 100%;
+          }
+          @include screen(tablet){
+            font-size: $font-size-x-regular;
+            padding-left: 10px;
+          }
+          @include screen(desktop){
+            margin-top: 0px;
+            font-size: $font-size-xx-regular;
+          }
+          @media screen and (max-width: 374px){
+            font-size: 10px !important;
+          }
+        }
+      }
+
+      .row-discount{
+        flex-wrap: nowrap;
+        display: flex;
+        justify-content: space-between;
+
+          .discount-text {
+            color: #58595b !important;
+            font-size: $font-size-x-regular;
+            font-family: $rubik-normal;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: normal;
+            text-align: left;
+
+            @include screen(mobile){
+              font-size: $font-size-small;
+              width: 100%;
+            }
+            @include screen(tablet){
+              font-size: $font-size-medium;
+            }
+            @include screen(desktop){
+              font-size: $font-size-x-regular;
+            }
+            @media screen and (max-width: 374px){
+               font-size: 10px !important;
+            }
+          }
+          .discount-value{
+            color: #2769f6;
+            font-size: $font-size-xx-regular;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            font-family: Rubik-medium;
+
+            letter-spacing: normal;
+            text-align: right;
+            @include screen(mobile){
+              font-size: $font-size-small;
+
+              width: 100%;
+            }
+            @include screen(tablet){
+              font-size: $font-size-x-regular;
+            }
+            @include screen(desktop){
+              font-size: $font-size-xx-regular;
+            }
+            @media screen and (max-width: 374px){
+              font-size: 10px !important;
+            }
+          }
+      }
+
+      .row-shipping{
+        flex-wrap: nowrap;
+        display: flex;
+        justify-content: space-between;
+
+        @include screen(mobile){
+          width: 100%;
+        }
+        @include screen(tablet){
+
+        }
+        @media screen and (max-width: 374px){
+
+        }
+        .shipping-text {
+          color: #58595b !important;
+          font-size: $font-size-x-regular;
+          font-family: Rubik;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          letter-spacing: normal;
+          text-align: left;
+
+          @include screen(mobile){
+
+            font-size: $font-size-small;
+            width: 100%;
+          }
+          @include screen(tablet){
+            font-size: $font-size-medium;
+          }
+          @include screen(desktop){
+            font-size: $font-size-x-regular;
+          }
+          @media screen and (max-width: 374px){
+            font-size: 10px !important;
+          }
+        }
+        .shipping-value{
+          color: #231f20;
+          font-size: $font-size-xx-regular;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          font-family: Rubik-medium;
+
+          letter-spacing: normal;
+          text-align: right;
+          @include screen(mobile){
+            font-size: $font-size-small;
+
+            width: 100%;
+          }
+          @include screen(tablet){
+            font-size: $font-size-x-regular;
+          }
+          @include screen(desktop){
+            margin-top: 0px;
+            font-size: $font-size-xx-regular;
+          }
+          @media screen and (max-width: 374px){
+            font-size: 10px !important;
+          }
+        }
+      }
+
+      .row-totals {
+        flex-wrap: wrap;
+        display: flex;
+        flex-flow: row wrap;
+        .border-line{
+          flex: 1 100%;
+          margin-left: -15px;
+          margin-right: -15px;
+        }
+        .totals{
+          flex: 1;
+          color: #000000;
+          font-size: $font-size-x-regular;
+          font-family: Rubik-medium;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          letter-spacing: normal;
+          text-align: left;
+          @include screen(mobile){
+
+            font-size: $font-size-small;
+            width: 100%;
+          }
+          @include screen(tablet){
+            font-size: $font-size-medium;
+          }
+          @include screen(desktop){
+            font-size: $font-size-x-regular;
+          }
+          @media screen and (max-width: 374px){
+            font-size: 10px !important;
+          }
+        }
+        .total-value{
+          color: #000000;
+          font-size: $font-size-xx-regular;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          font-family: Rubik-medium;
+
+          letter-spacing: normal;
+          text-align: right;
+          flex: 1;
+          @include screen(mobile){
+            font-size: $font-size-small;
+
+            width: 100%;
+          }
+          @include screen(tablet){
+            font-size: $font-size-x-regular;
+          }
+          @include screen(desktop){
+            margin-top: 0px;
+            font-size: $font-size-xx-regular;
+          }
+          @media screen and (max-width: 374px){
+            font-size: 10px !important;
+          }
+        }
+      }
+
+    }
+    .border-price{
+      margin-top: 3rem;
+      margin-left: 10px;
+      @include screen(mobile){
+        margin-top: 1rem;
+      }
+      @include screen(tablet){
+        margin-top: 1rem;
+      }
+      @include screen(desktop){
+        margin-top: 3rem;
+      }
+    }
+    .form-voucher{
+      margin-top: 40px;
+      position: relative;
+      display: flex;
+      .form-control-voucher{
+        border: solid 1px #d8d8d8;
+        border-radius: 22.5px;
+        width: 472px;
+        height: 45px;
+        font-size: $font-size-medium;
+        padding-left: 6%;
+        @include screen(mobile){
+          width: 100%;
+          height: 34px;
+          font-size: $font-size-small;
+        }
+        @include screen(tablet){
+          width: 100%;
+          font-size: $font-size-small;
+        }
+        @include screen(desktop){
+          font-size: 14px;
+        }
+      }
+
+      .btn-used{
+        border: solid 1px;
+        background-color: #2769f6;
+        color: white;
+        border-radius: 22.5px;
+        width: 144px;
+        height: 45px;
+
+        display: flex;
+        float: right;
+        font-size: $font-size-medium;
+        font-family: $rubik-medium;
+        font-weight: 500;
+        padding-left: 35px;
+        padding: unset;
+        padding-left: 12%;
+
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        @include screen(mobile){
+          width: 33%;
+          height: 35px;
+          font-size: $font-size-small;
+          padding: unset;
+          padding-left: 6%;
+        }
+        @include screen(tablet){
+          width: 34%;
+          padding-left: 8%;
+
+        }
+        @include screen(desktop){
+          width: 34%;
+          padding-left: 11%;
+        }
+        @media screen and (max-width: 374px){
+          font-size: 10px !important;
+        }
+        @media screen and (width: 768px){
+          font-size: 12px;
+          width: 31%;
+        }
+      }
+
+      .btn-voucher-exist {
+        font-size: 35px !important;
+        padding-top: 0px !important;
+        align-items: center;
+        @media screen and (min-width: 1200px) {
+            font-size: 35px !important;
+            padding-top: 0px !important;
+
+        }
+        @media screen and (min-width:992px) and (max-width: 1199px) {
+            font-size: 30px !important;
+        }
+        @media screen and (min-width:768px) and (max-width: 991px) {
+
+        }
+        @media screen and (min-width:551px) and (max-width:767px) {
+            font-size: 27px !important;
+        }
+        @media screen and (min-width:450px) and (max-width:550px) {
+            font-size: 27px !important;
+        }
+        @media screen and (max-width:449px) {
+        }
+      }
+
+      .btn-remove-voucher{
+        border: solid 1px #bbbdbf;
+        background-color: #bbbdbf;
+        color: white;
+        border-radius: 15px;
+        width: 18px;
+        height: 18px;
+        display: flex;
+        font-size: 12px;
+        font-family: $rubik-medium;
+        font-weight: 500;
+        padding-left: 3px;
+        padding-top: 0px;
+
+        @media screen and (min-width:1200px) {
+            margin-right: 26%;
+        }
+        @media screen and (max-width:767px) {
+            margin-right: 0px;
+        }
+      }
+    }
+    .a{
+      .btn-disabled{
+         background-color: grey !important;
+      }
+
+      .btn-next{
+        text-align: center;
+        margin-top: 10%;
+        margin-left: 30%;
+        width: 239px;
+        height: 50px;
+        font-family: Rubik-medium;
+        font-size: 18px;
+        font-weight: 500;
+        border: solid;
+        border-radius : 26px;
+        background-color: #2769f6;
+        color: white;
+        margin-bottom: 4%;
+        @include screen(mobile){
+          width: 50%;
+          height: 30px;
+          margin-left: 25%;
+          margin-top: 7%;
+          font-size: $font-size-small;
+          padding-top: 8px;
+          padding-bottom: 25px;
+        }
+        @include screen(tablet){
+          width: 50%;
+          height: 50px;
+          margin-left: 25%;
+        }
+        @include screen(desktop){
+          margin-left: 25%;
+        }
+        @media screen and (width: 768px){
+          font-size: 12px;
+        }
+      }
+    }
+
+
+    .row-show-policy{
+      display: flex;
+
+      .huruf{
+        text-decoration: none;
+        text-align: center;
+        font-family: $rubik-normal;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.21;
+        letter-spacing: normal;
+        color: #707070;
+        margin-bottom: 7px;
+
+        a.link{
+          color: #2769f6;
+          font-size: inherit;
+        }
+
+        @include screen(mobile){
+          font-size: 12px;
+          height: 35px;
+        }
+
+      }
+    }
+
+  }
+
+  & .checkout-order-detail {
+    height: max-content;
+    @media (max-width: 767px) {
+      width: 100%;
+      height: max-content;
+      margin-left: 0px;
+      margin-top: 15px;
+      .checkout-summary {
+        height: 41px;
+        font-size: $font-size-medium;
+        padding-top: 10px;
+      }
+      .checkout-order-summary-list-heading{
+          width: 100%;
+        margin-left: 5px;
+      }
+      .js-order-totals{
+        .row-subtotals {
+            margin-top: -10px;
+            width: 100%;
+          .subtotal {
+            font-size: $font-size-small;
+            width: 100%;
+          }
+          .subtotal-value{
+            font-size: $font-size-small;
+
+            width: 100%;
+          }
+        }
+        .row-totals {
+          .totals{
+              flex: 1;
+              font-size: $font-size-small;
+              width: 100%;
+          }
+          .total-value{
+            flex: 1;
+            font-size: $font-size-small;
+
+            width: 100%;
+          }
+        }
+        .form-voucher{
+          .form-control-voucher{
+              width: 88%;
+              height: 34px;
+
+              font-size: $font-size-small;
+              padding-left: 10px;
+          }
+        }
+        .huruf{
+          //display: none;
+          font-size: 12px;
+          text-align: left;
+          width: auto;
+          margin-bottom: 20px;
+          a.link{
+            font-size: 12px;
+            height: 35px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.address_cobox{
+  @media screen and (max-width: 767px){
+    width: 100%;
+  }
+}
+
+.row-error-message{
+    width: 88%;
+    height: 34px;
+    margin-left: 10%;
+    width: 472px;
+    height: 45px;
+    margin-left: 55px;
+    font-size: $font-size-medium;
+    padding-right: 35px;
+    @include screen(mobile){
+      width: 88%;
+      height: 34px;
+      margin-left: 10%;
+      font-size: $font-size-small;
+      padding-left: 6px;
+    }
+    @include screen(tablet){
+      width: 97%;
+      margin-left: 33px;
+      font-size: $font-size-small;
+    }
+    @include screen(desktop){
+      font-size: 14px;
+    }
+    @media screen and (max-width: 374px){
+      font-size: 10px !important;
+    }
+
+    .coupon-error-message {
+      color : #ec2256;
+      font-size: 14px;
+    }
+}
+
+.row-success-message{
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 45px;
+  font-size: $font-size-medium;
+  display: flex;
+  padding-left: 6%;
+
+    @include screen(mobile){
+      height: 34px;
+      font-size: $font-size-small;
+    }
+    @include screen(tablet){
+      font-size: $font-size-small;
+    }
+    @include screen(desktop){
+      font-size: 14px;
+    }
+    @media screen and (max-width: 374px){
+      font-size: 10px !important;
+    }
+
+    .coupon-success-message {
+      color : #01d8a1;
+    }
+}
+
+.border-red {
+    border-color: #ec2256 !important;
+}
+
+.placeholder-red::placeholder {
+    color : #ec2256;
+}
+
+.border-green-success {
+    border-color: #d8d8d8 !important;
+}
+
+.placeholder-green-success::placeholder {
+    color : #01d8a1;
+}
+
+.green-success {
+    color : #01d8a1;
+}
+
+.background-green-success {
+    background-color: #edfffa;
+}
+
+.btn-disabled{
+    background-color: grey !important;
+}
+
+
+#formRemoveVoucher{
+  position: absolute;
+  bottom: 25%;
+  right: 37%;
+}
+
+#formApplyVoucher {
+  flex: 1;
+  position: relative;
+}
+
+.checkorder_box .checkout-order .form-voucher{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.add-delivery-address-right-wrapper {
+    .huruf {
+        display: none;
+    }
+
+    .checkout-order-detail .js-order-totals .subtotals .row-shipping {
+        display: none;
+    }
+}
+
+.choose-delivery-method-right-wrapper {
+    .huruf {
+        display: none;
+    }
+}
+
+.payment-method-right-wrapper {
+    .huruf {
+        display: none;
+    }
+
+}
+
+.checkout-summary-right-wrapper {
+
+}
+
+#addressNewModal {
+    .select2-container {
+        z-index: 1041;
+    }
+}
+
+.installation_fee{
+  margin-top: 10px;
+  margin-bottom: 25px;
+  .installation-fee-box{
+    border: solid 1px #bbbdbf;
+    border-radius: 4px;
+
+    .install-fee-header{
+      background-color: #2769f6;
+      font-family: Rubik-medium;
+      font-size: 14px;
+      color: #ffffff;
+      padding: 12px 20px;
+      border-radius: 4px 4px 0 0;
+      @media screen and (max-width: 767px){
+        font-size: 12px;
+      }
+    }
+    .install-fee-body{
+      padding: 12px 20px;
+      .vendor-install-fee{
+        .vendor-name{
+          font-family: Rubik-medium;
+          font-size: 14px;
+          color: #58595b;
+          @media screen and (max-width: 767px){
+            font-size: 12px;
+          }
+        }
+        .install-fee-list{
+          width: 100%;
+          max-height: 70px;
+          overflow-y: hidden;
+          padding-right: 15px;
+          border-top: solid 0.3px #BBBDC3;
+          border-bottom: solid 0.3px #BBBDC3;
+          margin: 5px 0;
+          padding-top: 5px;
+          .city-install-fee{
+            width: 50%;
+            font-family: Rubik;
+            font-size: 14px;
+            color: #58595b;
+            @media screen and (max-width: 767px){
+              font-size: 12px;
+            }
+          }
+          .install-fee-total{
+            width: 50%;
+            text-align: right;
+            font-family: Rubik;
+            font-size: 14px;
+            color: #58595b;
+            @media screen and (max-width: 767px){
+              font-size: 12px;
+            }
+          }
+        }
+        .install-fee-list:hover{
+          overflow-y: auto;
+          padding-right: 10px;
+        }
+      }
+    }
+    .install-fee-footer{
+      padding: 12px 20px;
+    }
+  }
+  .install-fee-note{
+    font-family: $rubik-normal;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ec2256;
+    margin-top: 10px;
+
+    @media screen and (max-width: 767px){
+      font-size: 12px;
+      padding: 0 10px;
+    }
+  }
+}
+
+.install-fee-list::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+  border-radius: 5px;
+  background-color: #F5F5F5;
+}
+
+.install-fee-list::-webkit-scrollbar
+{
+  width: 5px;
+  background-color: #F5F5F5;
+}
+
+.install-fee-list::-webkit-scrollbar-thumb
+{
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: rgba(219, 223, 233, 0.5);
+}

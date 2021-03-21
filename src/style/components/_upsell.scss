@@ -1,0 +1,32 @@
+#upselling {
+  margin-top: 2%;
+  margin-bottom: 5%;
+  @include screen(mobile){
+    margin-bottom: 10%;
+  }
+  .otherprod-container {
+    padding: 0 50px;
+
+    @media (max-width: 425px) {
+      padding: 0 15px;
+    }
+
+    .title-otherProd {
+      margin-bottom: 2%;
+      padding-left: 10px  ;
+      font-size: 21px;
+      font-weight: 500;
+      line-height: 1.2;
+      text-align: left;
+      color: #404041;
+      @include screen(mobile) {
+        font-size: 14px;
+        line-height: 1.8;
+      }
+    }
+
+    .tab-prod {
+      width: 100%;
+    }
+  }
+}
