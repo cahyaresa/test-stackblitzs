@@ -4,6 +4,7 @@ import { SearchHompageFilterComponent } from '../search-hompage-filter/search-ho
 import { RecentNewsComponent } from '../recent-news/recent-news.component';
 import { MostViewProductsCarouselComponent } from '../most-view-products-carousel/most-view-products-carousel.component';
 import { MktBannerCarouselComponent } from '../../mkt-shared/component/mkt-banner-carousel/mkt-banner-carousel.component';
+import { MktHomepageBannerAndSearchComponent } from '../mkt-homepage-banner-and-search/mkt-homepage-banner-and-search.component';
 
 export const homepageLayoutConfig: LayoutConfig = {
     layoutSlots: {
@@ -23,7 +24,8 @@ export const homepageLayoutConfig: LayoutConfig = {
           'NewsAndArticlesHomePage',
 
 
-          'banner'
+          'banner',
+          'bannerAndSearch'
           // 'SearchHompageFilter',
           // 'SearchFilterHomepage',
           // 'mostViewProduct',
@@ -52,7 +54,11 @@ export const homepageLayoutConfig: LayoutConfig = {
         },
         MktBannerCarouselComponent: {
           component: MktBannerCarouselComponent
+        },
+        MktHomepageBannerAndSearchComponent: {
+          component: MktHomepageBannerAndSearchComponent
         }
+
         
     }
   };
@@ -85,7 +91,12 @@ export const staticComponents: {
       typeCode: 'MktBannerCarouselComponent',
       flexType: 'MktBannerCarouselComponent',
       uid: 'MktBannerCarouselComponent',
-    }
+    },
+    MktHomepageBannerAndSearchComponent: {
+      typeCode: 'MktHomepageBannerAndSearchComponent',
+      flexType: 'MktHomepageBannerAndSearchComponent',
+      uid: 'MktHomepageBannerAndSearchComponent',
+    },
 };
   
 const cmsPageSlotConfig: CmsPageSlotsConfig = {
@@ -100,6 +111,9 @@ const cmsPageSlotConfig: CmsPageSlotsConfig = {
   // },
   banner: {
     componentIds: ['MktBannerCarouselComponent'],
+  },
+  bannerAndSearch:{
+    componentIds: ['MktHomepageBannerAndSearchComponent']
   }
 };
 
